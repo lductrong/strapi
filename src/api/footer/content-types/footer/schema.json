@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Footer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "copyright_text": {
+      "type": "string"
+    },
+    "info": {
+      "type": "component",
+      "component": "layout.footer-column",
+      "repeatable": false
+    },
+    "SocialLink": {
+      "type": "component",
+      "component": "elements.social-link",
+      "repeatable": false
+    }
+  }
+}

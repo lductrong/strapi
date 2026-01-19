@@ -221,15 +221,6 @@ export default {
         }),
       ]);
 
-      // Seed Global Settings
-      console.log('📝 Creating Global Settings...');
-      await strapi.entityService.create('api::global.global', {
-        data: {
-          site_name: 'UniVenture Hub',
-          publishedAt: new Date(),
-        },
-      });
-
       // Seed Homepage
       console.log('📝 Creating Homepage...');
       await strapi.entityService.create('api::homepage.homepage', {

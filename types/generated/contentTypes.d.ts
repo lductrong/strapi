@@ -712,34 +712,60 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
-  collectionName: 'globals';
+export interface ApiFooterFooter extends Struct.SingleTypeSchema {
+  collectionName: 'footers';
   info: {
-    description: 'C\u1EA5u h\u00ECnh chung cho website';
-    displayName: 'Global';
-    pluralName: 'globals';
-    singularName: 'global';
+    displayName: 'Footer';
+    pluralName: 'footers';
+    singularName: 'footer';
   };
   options: {
     draftAndPublish: true;
-    increments: true;
-    timestamps: true;
+  };
+  attributes: {
+    copyright_text: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    info: Schema.Attribute.Component<'layout.footer-column', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::footer.footer'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    SocialLink: Schema.Attribute.Component<'elements.social-link', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
+  collectionName: 'headers';
+  info: {
+    displayName: 'Header';
+    pluralName: 'headers';
+    singularName: 'header';
+  };
+  options: {
+    draftAndPublish: true;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    footer: Schema.Attribute.Component<'layout.footer', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::global.global'
+      'api::header.header'
     > &
       Schema.Attribute.Private;
-    logo: Schema.Attribute.Media<'images'>;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     navbar: Schema.Attribute.Component<'layout.navbar', false>;
     publishedAt: Schema.Attribute.DateTime;
-    site_name: Schema.Attribute.String & Schema.Attribute.Required;
+    site_name: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1590,7 +1616,8 @@ declare module '@strapi/strapi' {
       'api::community-page.community-page': ApiCommunityPageCommunityPage;
       'api::course.course': ApiCourseCourse;
       'api::event.event': ApiEventEvent;
-      'api::global.global': ApiGlobalGlobal;
+      'api::footer.footer': ApiFooterFooter;
+      'api::header.header': ApiHeaderHeader;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::mentor.mentor': ApiMentorMentor;
       'api::mentoring-session.mentoring-session': ApiMentoringSessionMentoringSession;

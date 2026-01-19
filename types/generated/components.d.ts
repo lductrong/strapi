@@ -127,6 +127,16 @@ export interface ElementsQuote extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsSocialLink extends Struct.ComponentSchema {
+  collectionName: 'components_elements_social_links';
+  info: {
+    displayName: 'SocialLink';
+  };
+  attributes: {
+    SocialLink: Schema.Attribute.Component<'elements.link', true>;
+  };
+}
+
 export interface ElementsTestimonial extends Struct.ComponentSchema {
   collectionName: 'components_elements_testimonials';
   info: {
@@ -143,42 +153,18 @@ export interface ElementsTestimonial extends Struct.ComponentSchema {
   };
 }
 
-export interface LayoutFooter extends Struct.ComponentSchema {
-  collectionName: 'components_layout_footers';
-  info: {
-    displayName: 'Footer';
-    icon: 'arrow-down';
-    name: 'footer';
-  };
-  attributes: {
-    columns: Schema.Attribute.Component<'elements.footer-column', true>;
-    copyright_text: Schema.Attribute.String;
-  };
-}
-
 export interface LayoutFooterColumn extends Struct.ComponentSchema {
   collectionName: 'components_layout_footer_columns';
   info: {
-    displayName: 'Footer Column';
+    displayName: 'Footer info';
     icon: 'align-left';
     name: 'footer-column';
   };
   attributes: {
-    links: Schema.Attribute.Component<'elements.link', true>;
+    Address: Schema.Attribute.String;
+    email: Schema.Attribute.String;
+    Phone: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
-  };
-}
-
-export interface LayoutGlobalLayout extends Struct.ComponentSchema {
-  collectionName: 'components_layout_global_layouts';
-  info: {
-    displayName: 'Global Layout';
-    icon: 'layout';
-    name: 'global-layout';
-  };
-  attributes: {
-    footer: Schema.Attribute.Component<'layout.footer', false>;
-    navbar: Schema.Attribute.Component<'layout.navbar', false>;
   };
 }
 
@@ -405,10 +391,9 @@ declare module '@strapi/strapi' {
       'elements.link': ElementsLink;
       'elements.process-step': ElementsProcessStep;
       'elements.quote': ElementsQuote;
+      'elements.social-link': ElementsSocialLink;
       'elements.testimonial': ElementsTestimonial;
-      'layout.footer': LayoutFooter;
       'layout.footer-column': LayoutFooterColumn;
-      'layout.global-layout': LayoutGlobalLayout;
       'layout.navbar': LayoutNavbar;
       'sections.cta-banner': SectionsCtaBanner;
       'sections.featured-articles': SectionsFeaturedArticles;

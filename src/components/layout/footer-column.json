@@ -3,7 +3,7 @@
   "info": {
     "name": "footer-column",
     "icon": "align-left",
-    "displayName": "Footer Column"
+    "displayName": "Footer info"
   },
   "options": {},
   "attributes": {
@@ -11,10 +11,14 @@
       "type": "string",
       "required": true
     },
-    "links": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.link"
+    "email": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "string"
     }
   }
 }
