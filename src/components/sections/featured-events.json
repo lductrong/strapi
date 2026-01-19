@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_featured_events",
+  "info": {
+    "name": "featured-events",
+    "icon": "calendar",
+    "displayName": "Featured Events"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": false
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event"
+    }
+  }
+}

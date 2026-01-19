@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_mentor_grids",
+  "info": {
+    "name": "mentor-grid",
+    "icon": "users",
+    "displayName": "Mentor Grid"
+  },
+  "options": {},
+  "attributes": {
+    "mentors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mentor.mentor"
+    }
+  }
+}

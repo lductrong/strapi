@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_features_grids",
+  "info": {
+    "name": "features-grid",
+    "icon": "th",
+    "displayName": "Features Grid"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature-card"
+    }
+  }
+}

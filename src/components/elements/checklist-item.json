@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elements_checklist_items",
+  "info": {
+    "name": "checklist-item",
+    "icon": "check",
+    "displayName": "Checklist Item"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

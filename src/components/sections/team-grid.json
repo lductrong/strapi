@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_team_grids",
+  "info": {
+    "name": "team-grid",
+    "icon": "users",
+    "displayName": "Team Grid"
+  },
+  "options": {},
+  "attributes": {
+    "members": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::team-member.team-member"
+    }
+  }
+}

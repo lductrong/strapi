@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mentoring_sessions",
+  "info": {
+    "singularName": "mentoring-session",
+    "pluralName": "mentoring-sessions",
+    "displayName": "Mentoring Session",
+    "description": "Lịch đặt mentor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "mentor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mentor.mentor",
+      "required": true
+    },
+    "time": {
+      "type": "datetime",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["Confirmed", "Completed", "Cancelled"],
+      "required": true,
+      "default": "Confirmed"
+    }
+  }
+}

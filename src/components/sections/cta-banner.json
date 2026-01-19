@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_cta_banners",
+  "info": {
+    "name": "cta-banner",
+    "icon": "flag",
+    "displayName": "CTA Banner"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.button"
+    }
+  }
+}

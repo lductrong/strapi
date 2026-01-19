@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_startup_portfolios",
+  "info": {
+    "name": "startup-portfolio",
+    "icon": "briefcase",
+    "displayName": "Startup Portfolio"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "startups": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::startup.startup"
+    }
+  }
+}

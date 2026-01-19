@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_filter_configs",
+  "info": {
+    "name": "filter-config",
+    "icon": "filter",
+    "displayName": "Filter Config"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "enable_topic_filter": {
+      "type": "boolean",
+      "default": true
+    },
+    "enable_level_filter": {
+      "type": "boolean",
+      "default": true
+    },
+    "enable_mentor_filter": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

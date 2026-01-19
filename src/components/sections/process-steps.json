@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_process_steps",
+  "info": {
+    "name": "process-steps",
+    "icon": "list",
+    "displayName": "Process Steps"
+  },
+  "options": {},
+  "attributes": {
+    "steps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.process-step"
+    }
+  }
+}

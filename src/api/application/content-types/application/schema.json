@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "applications",
+  "info": {
+    "singularName": "application",
+    "pluralName": "applications",
+    "displayName": "Application",
+    "description": "Hồ sơ startup đã nộp"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "startup_name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["Pending", "Under Review", "Approved", "Rejected"],
+      "required": true,
+      "default": "Pending"
+    }
+  }
+}

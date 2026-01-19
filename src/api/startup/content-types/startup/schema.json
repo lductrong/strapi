@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "startups",
+  "info": {
+    "singularName": "startup",
+    "pluralName": "startups",
+    "displayName": "Startup",
+    "description": "Dự án startup đã đầu tư"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "funding_amount": {
+      "type": "integer",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

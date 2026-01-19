@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_navbars",
+  "info": {
+    "name": "navbar",
+    "icon": "bars",
+    "displayName": "Navbar"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.button"
+    }
+  }
+}

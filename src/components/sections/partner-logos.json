@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_partner_logos",
+  "info": {
+    "name": "partner-logos",
+    "icon": "handshake",
+    "displayName": "Partner Logos"
+  },
+  "options": {},
+  "attributes": {
+    "partners": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::partner.partner"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "academy_pages",
+  "info": {
+    "singularName": "academy-page",
+    "pluralName": "academy-pages",
+    "displayName": "Academy Page",
+    "description": "Trang Academy"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.hero"
+      ]
+    }
+  }
+}

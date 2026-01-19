@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_testimonials",
+  "info": {
+    "name": "testimonial",
+    "icon": "comment",
+    "displayName": "Testimonial"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "partners_involved": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::partner.partner"
+    }
+  }
+}

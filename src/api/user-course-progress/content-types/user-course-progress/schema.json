@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_course_progresses",
+  "info": {
+    "singularName": "user-course-progress",
+    "pluralName": "user-course-progresses",
+    "displayName": "User Course Progress",
+    "description": "Tiến độ học tập của người dùng"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "required": true
+    },
+    "progress_percent": {
+      "type": "integer",
+      "required": true,
+      "default": 0,
+      "min": 0,
+      "max": 100
+    }
+  }
+}

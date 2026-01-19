@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "venture_pages",
+  "info": {
+    "singularName": "venture-page",
+    "pluralName": "venture-pages",
+    "displayName": "Venture Page",
+    "description": "Trang Venture Hub"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.hero",
+        "elements.checklist",
+        "sections.process-steps"
+      ]
+    }
+  }
+}

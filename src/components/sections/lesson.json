@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_lessons",
+  "info": {
+    "name": "lesson",
+    "icon": "book-open",
+    "displayName": "Lesson"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "video_url": {
+      "type": "string"
+    }
+  }
+}

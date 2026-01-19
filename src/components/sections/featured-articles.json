@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_featured_articles",
+  "info": {
+    "name": "featured-articles",
+    "icon": "newspaper",
+    "displayName": "Featured Articles"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    }
+  }
+}

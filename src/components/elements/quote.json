@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_elements_quotes",
+  "info": {
+    "name": "quote",
+    "icon": "quote-left",
+    "displayName": "Quote"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "author_name": {
+      "type": "string",
+      "required": true
+    },
+    "author_title": {
+      "type": "string",
+      "required": false
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
